@@ -1,0 +1,4 @@
+1. find "name of folder" -name "name of file"
+2. ps -aux
+3. kill -9 "id of process"
+4. diff file1 file2
