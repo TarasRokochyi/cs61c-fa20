@@ -1,4 +1,8 @@
-1. find "name of folder" -name "name of file"
-2. ps -aux
-3. kill -9 "id of process"
-4. diff file1 file2
+1. mv /home/dir/* /home/dest_dir 
+2. chmod 777 file1
+3. pwd
+4. ping
+5. find "name of folder" -name "name of file"
+6. ps -aux
+7. kill -9 "id of process"
+8. diff file1 file2
