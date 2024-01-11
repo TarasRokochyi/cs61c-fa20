@@ -49,7 +49,6 @@ Image *readData(char *filename)
         color->R = r;
         color->G = g;
         color->B = b;
-        //Color color = {r, g, b};
         pixels[i] = color;
     }
     

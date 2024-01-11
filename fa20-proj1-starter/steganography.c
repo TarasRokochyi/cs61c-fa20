@@ -22,12 +22,52 @@
 Color *evaluateOnePixel(Image *image, int row, int col)
 {
 	//YOUR CODE HERE
+
+    int tot_rows = image->rows;
+    int tot_cols = image->cols;
+
+    // getting blue color from (row*tot_cols)+col cell
+    uint8_t blue = image->image[(row*tot_cols) + col]->B;
+
+    uint8_t mask = 1;
+
+    Color *color = (Color*) malloc(sizeof(Color));
+    if (blue & mask){
+        color->R = 255;
+        color->G = 255;
+        color->B = 255;
+        return color;
+    }
+    else{
+        color->R = 0;
+        color->G = 0;
+        color->B = 0;
+        return color;
+    }
 }
 
 //Given an image, creates a new image extracting the LSB of the B channel.
 Image *steganography(Image *image)
 {
 	//YOUR CODE HERE
+
+    int rows = image->rows;
+    int cols = image->cols;
+
+    Image *new_image = (Image*)malloc(sizeof(Image));
+    new_image->image = (Color**)malloc(sizeof(Color *) * rows * cols);
+    new_image->rows = rows;
+    new_image->cols = cols;
+
+    Color *color;
+    for (int i = 0; i < rows; i++){
+        for (int j = 0; j < cols; j++){
+            color = evaluateOnePixel(image, i, j);
+            new_image->image[(i*cols)+j] = color;
+        }
+    }
+
+    return new_image;
 }
 
 /*
@@ -46,4 +86,14 @@ Make sure to free all memory before returning!
 int main(int argc, char **argv)
 {
 	//YOUR CODE HERE
+
+    char *filename = argv[1];
+    Image *input_image = readData(filename);
+
+    Image *new_image = steganography(input_image);
+    writeData(new_image);
+
+    freeImage(input_image);
+    freeImage(new_image);
+
 }
