@@ -1,7 +1,11 @@
-1.
-2.
-3.
-4.
-5.
-6.
+1.-rm -rf core *.o *~ "#"*"#" Makefile.bak $(BINARIES) *.dSYM
+2. $(BIT_OPS_PROG): $(BIT_OPS_OBJS)
+	$(CC) $(CFLAGS) -g -o $(BIT_OPS_PROG) $(BIT_OPS_OBJS) $(LDFLAGS)
+
+$(LFSR_PROG): $(LFSR_OBJS)
+	$(CC) $(CFLAGS) -g -o $(LFSR_PROG) $(LFSR_OBJS) $(LDFLAGS)
+3.gcc
+4.c99
+5.$(FOO)
+6. Unix operating system
 7.
