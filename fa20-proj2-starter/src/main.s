@@ -14,6 +14,7 @@ main:
     # initialize register a2 to zero
     mv a2, zero
 
+    ebreak
     # call classify function
     jal classify
 

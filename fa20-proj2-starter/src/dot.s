@@ -46,7 +46,6 @@ dot:
     addi t0, x0, 4
     mul t3, a3, t0
     mul t4, a4, t0
-    ebreak
 
 loop_start:
 

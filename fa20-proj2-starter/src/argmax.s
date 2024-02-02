@@ -49,8 +49,8 @@ loop_continue:
 loop_end:
     
     # Epilogue
-    lw s0, 4(sp)
-    lw s1, 0(sp)
+    lw s1, 4(sp)
+    lw s0, 0(sp)
     addi sp, sp, 8
 
     ret

@@ -32,7 +32,7 @@ matmul:
     bge x0, a4, exep73
     bge x0, a5, exep73
 
-    bne a1, a5, exep74
+    bne a2, a4, exep74
 
     # Prologue
     addi sp, sp, -32
@@ -115,8 +115,7 @@ outer_loop_end:
     lw s0, 0(sp)
     addi sp, sp, 32
     
-    ret
-
+    jalr x0, x1, 0
 
     
 exep72: 
@@ -129,4 +128,8 @@ exep73:
 
 exep74: 
     addi a1, x0, 74
+    j exit2
+
+exep44:
+    addi a1, x0, 44
     j exit2
