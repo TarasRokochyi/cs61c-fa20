@@ -1,12 +1,12 @@
 Scenario 1
-    1.
-    2.
-    3.
+    1. Cache Size, Step Size. Because Cache Size in bytes is exactly equal to Step Size in bytes.
+    2. 0
+    3. Step Size, 1
 
 Scenario 2
-    1.
-    2.
-    3.
+    1. 32
+    2. 
+    3. 1
 
 Scenario 3
     1.
@@ -17,8 +17,8 @@ Scenario 3
 
 --- lines below are ignored by the AG ---
 
-Checkoff Question 1:
-Checkoff Question 2:
+Checkoff Question 1: because it doesnt matter if we have more cycles while we do not hit because of the other parameters.
+Checkoff Question 2: step size, number of blocks
 Checkoff Question 3:
 Checkoff Question 4:
 Checkoff Question 5:

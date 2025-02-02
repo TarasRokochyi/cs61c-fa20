@@ -35,6 +35,21 @@ void benchmark(int *A, int *B, int n, int blocksize,
             }
         }
     }
+    //for (int i = 0; i< n; i++){
+    //    for (int j = 0; j < n; j++){
+    //        printf("%d ", A[i+j*n]);
+    //    }
+    //    printf("\n");
+    //}
+
+    //printf("\n");
+
+    //for (int i = 0; i< n; i++){
+    //    for (int j = 0; j < n; j++){
+    //        printf("%d ", B[i+j*n]);
+    //    }
+    //    printf("\n");
+    //}
 }
 
 int main( int argc, char **argv ) {
